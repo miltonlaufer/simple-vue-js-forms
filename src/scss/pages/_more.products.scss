@@ -1,0 +1,109 @@
+.more-products {
+  &__search {
+    margin-bottom: .5em;
+  }
+
+  .el-tabs__content {
+    margin-bottom: -.5em;
+  }
+
+  &__product {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    &__data {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-left: 1em;
+      height: 100%;
+      width: 100%;
+
+      &-name {
+        //        color: $primary;
+        color: var(--gray);
+        font-weight: 500;
+        font-size: 1.2em;
+        flex-grow: 2;
+
+        &:hover {
+          color: $primary;
+          text-decoration: none;
+        }
+      }
+
+      &-price {
+        width: 100%;
+        color: var(--gray);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-value {
+          font-weight: 600;
+        }
+      }
+
+      &__description {
+        width: 100%;
+
+        &-popover {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            margin-left: .5em;
+          }
+
+          &:hover {
+            //font-weight: 600;
+            //box-shadow: 0 0 2px 0 #ccc;
+            color: $primary;
+          }
+        }
+      }
+    }
+
+    li {
+      list-style-type: none;
+      background-color: rgba(255, 255, 255, .5);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 1em;
+      //      margin-bottom: 1em;
+      font-size: 1.2em;
+      color: var(--gray);
+      transition: background-color .5s;
+      width: 23.5%;
+      box-shadow: 0 0 2px #ccc;
+      margin: .75em;
+
+      &:nth-child(even) {
+        //background-color: rgba(255, 255, 255, .6);
+      }
+
+      &:hover {
+        background-color: #ffffff;
+        box-shadow: 0 0 6px 2px #ccc;
+
+        img {
+          object-fit: cover !important;
+        }
+      }
+
+      a {
+        cursor: pointer;
+      }
+
+      .el-popover__reference-wrapper {
+        margin-left: .5em;
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+.home {
+  .main {
+    &__header {
+      h3 a {
+        color: #fff;
+        font-size: 1em;
+      }
+    }
+
+    &__content {
+      .clearfix:before,
+      .clearfix:after {
+        display: table;
+        content: "";
+      }
+
+      .clearfix:after {
+        clear: both;
+      }
+
+      .box-card {
+        height: 466px;
+        margin-bottom: 1.2em;
+      }
+
+      .el-card__header {
+        height: 62px;
+      }
+
+      .next-fl-image {
+        width: 100%;
+        display: block;
+        max-height: 256px;
+        object-fit: cover;
+      }
+
+      .bottom {
+        margin-top: 13px;
+        line-height: 12px;
+      }
+
+      .centered {
+        text-align: center;
+        width: 100%;
+      }
+
+      .card-title {
+        display: inline;
+      }
+
+      .el-card__header > div {
+        display: flex;
+        align-items: center;
+      }
+
+      .card-left {
+        margin-left: auto;
+      }
+
+      .new-row {
+        background-color: $gray-light;
+      }
+
+      .news-title-block {
+        margin-bottom: 15px;
+        &>a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+
+      .news-date {
+        font-size: 1.5rem;
+        color: darkgray;
+      }
+
+      .news-title {
+        display: inline;
+      }
+
+      .el-badge__content.is-fixed {
+        padding-bottom: 1.6em;
+      }
+
+      .virtual-cash,
+      .personal-info,
+      .commercialOffer {
+        font-size: 1.3rem;
+      }
+
+      .personal-info-header {
+        font-weight: bold;
+      }
+
+      .personal-info-text {
+        margin-bottom: 10px;
+      }
+
+      .personal-info-errors {
+        font-size: 1.3rem;
+        color: var(--danger);
+        margin-left: 1.7em !important;
+      }
+
+      .nolink {
+        color: #303133;
+      }
+
+      .product-name {
+        text-align: center;
+        font-size: 1.7em;
+        height: 3em;
+      }
+
+      .upgrade {
+        color: #fff;
+        border: 2px solid #ff7629;
+        border-radius: 27px;
+        padding: .525em 1em .625em;
+        font-size: 1rem;
+        line-height: 1em;
+        font-weight: 700;
+        background-color: #ff7629;
+      }
+
+      .upgrade:hover {
+        background-color: #ff5e03;
+        border-color: #f55800;
+      }
+
+      .upgrade-image {
+        width: 100%;
+        display: block;
+        height: 173px;
+        object-fit: cover;
+        margin: 8px;
+      }
+
+      .owned {
+        width: 100%;
+        text-align: center;
+        font-size: 1.4em;
+        font-weight: bold;
+        margin-top: 35px;
+      }
+    }
+  }
+}

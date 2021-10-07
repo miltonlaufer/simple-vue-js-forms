@@ -1,0 +1,78 @@
+$widthPersonalData: 40em;
+
+.personal-data {
+  &__form {
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+
+    .tab-error {
+      color: var(--danger);
+
+      &:before {
+        content: "\274C";
+        color: var(--danger);
+        font-size: 0.6em;
+        position: absolute;
+        left: 1em;
+        top: .05em;
+      }
+    }
+
+    .el-tabs__nav div:nth-child(2) .tab-error::before {
+      position: relative;
+      top: -.2em;
+      left: 0;
+      margin-right: .1em;
+    }
+
+    .submit-button {
+      margin-right: auto;
+      margin-left: auto;
+      width: $widthPersonalData;
+      text-align: right;
+    }
+
+    .el-tabs {
+      width: min-content;
+      margin-right: auto;
+      margin-left: auto;
+
+      &__nav-wrap, &__content {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &__content {
+        width: $widthPersonalData;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        /* TODO check this
+        overflow: visible;
+        */
+
+        .el-form {
+          &-item {
+
+            label {
+              //line-height: 1.3em;
+
+              &[for=email] {
+                width: 1em !important;
+
+                & + div {
+                  margin-left: 1em !important;
+                }
+              }
+            }
+
+            &__content {
+              /*just leaving his here because I end up using it every time in a while*/
+            }
+          }
+        }
+      }
+    }
+  }
+}

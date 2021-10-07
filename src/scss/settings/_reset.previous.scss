@@ -1,0 +1,32 @@
+$primary: #FF7629;
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+#container {
+  width: auto !important;
+  background: var(--light);
+  padding: 0;
+}
+
+#nprogress {
+  .bar {
+    background: $primary !important;
+  }
+
+  .spinner-icon {
+    border-top-color: $primary !important;
+    border-left-color: $primary !important;
+  }
+}
+
+.el-loading-mask{
+  background-color: hsla(0,0%,100%,.5) !important;
+  top: -1px !important;
+  right: -1px !important;
+  bottom: -1px !important;
+  left: -1px !important;
+}
+
+.el-popup-parent--hidden {
+  // TODO: check this. For some reason it moves the body padding when there are modal windows...
+  //padding-right: 0 !important;
+}

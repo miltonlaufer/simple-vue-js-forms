@@ -1,0 +1,59 @@
+// *************************************
+//
+//   Modular Scss
+//   -> Manifest
+//
+// *************************************
+//
+// Overwrite defaults
+@import "settings/colors";
+@import "settings/reset.previous";
+@import "./../../node_modules/element-ui/packages/theme-chalk/src/index";
+
+.popover-il {
+  padding: .5em;
+  font-size: .7em;
+  word-break: normal;
+}
+
+// SETTINGS
+
+@import "settings/devices.sizes";
+@import "settings/breakpoints";
+
+// Let's limit everything to our div
+#my-account__wrapper {
+  min-height: 450px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: Lato, sans-serif;
+  z-index: 0;
+
+
+
+
+  // Used only when logging out
+  #main > div {
+    transition: opacity .2s;
+  }
+
+  // -------------------------------------
+  //   Other styles
+  // -------------------------------------
+  @import "general/layout";
+  @import "general/nav";
+  @import "general/form.elements";
+  @import "settings/overwrite";
+
+  // -------------------------------------
+  // Pages
+  // -------------------------------------
+  @import "pages/login";
+  @import "pages/home";
+  @import "pages/personal.data";
+  @import "pages/my-licenses";
+  @import "pages/unlock.products";
+  @import "pages/more.products";
+  @import "pages/discussion.forums";
+}

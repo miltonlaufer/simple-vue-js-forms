@@ -1,0 +1,235 @@
+.my-licenses {
+  &__product {
+    &__main {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+    }
+
+    &-data {
+      flex-grow: 0;
+      margin-top: 1em;
+      width: min-content;
+      height: min-content;
+      background-color: white;
+      padding: 1.5em;
+      box-shadow: 0 0 1px 0 #ccc;
+
+      &:hover {
+        box-shadow: 0 0 6px 2px #ccc;
+      }
+    }
+
+    &-description {
+      margin-top: 1em;
+      height: auto;
+      column-count: 2;
+      column-width: auto;
+      column-fill: auto;
+      min-height: 300px;
+      orphans: 3;
+      color: var(--gray);
+
+      img {
+        max-width: 392px;
+        height: auto;
+      }
+    }
+
+    &-languages {
+      width: max-content;
+      float: left;
+      margin-top: 1.1em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-height: 8em;
+      margin-right: 2em;
+
+      .el-button {
+        border: none !important;
+      }
+
+      img {
+        cursor: pointer;
+        //   opacity: .3;
+
+        &.active-lang {
+          opacity: 1;
+        }
+      }
+    }
+
+    &-content {
+      flex-grow: 1;
+      margin-right: 1em;
+    }
+
+    &-footer {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 2em;
+
+      h2 {
+        font-size: 1.7rem;
+
+        svg {
+          opacity: .8;
+        }
+      }
+
+
+      & > div {
+        margin-right: 2em;
+       // height: auto;
+        text-align: center;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
+
+        &:only-child {
+          min-height: 350px !important;
+        }
+      }
+
+      .knowledge-base {
+        position: relative;
+      //  height: auto !important;
+        flex-grow: 1;
+        min-height: 200px;
+
+        .el-card__body {
+          position: absolute;
+          height: 85%;
+          overflow-y: auto;
+          width: 100%;
+          //max-height: 407px;
+          //overflow-y: scroll;
+        }
+
+        &__content {
+          text-align: left;
+
+          li {
+            list-style-type: none;
+            padding: .5em 0;
+            transition: background-color .2s;
+
+            &:hover {
+              background-color: $gray-light;
+            }
+
+            &:before {
+              content: "➔ ";
+              color: $gray;
+            }
+          }
+        }
+      }
+
+      .video-tutorial {
+        width: 40%;
+        //height: auto !important;
+        height: min-content !important;
+
+        &__header {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        }
+
+        .el-card__body {
+          position: relative;
+        }
+
+        /*.video-tutorial__carousel {
+          min-height: 500px;
+        }*/
+
+        .el-carousel {
+          width: 100%;
+
+          div {
+
+          }
+
+          &__item {
+            width: 100%;
+            height: 100%;
+          }
+
+          &__indicator {
+            &:not(.is-active) {
+              display: none !important;
+            }
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .related-products {
+        padding: 1em;
+        height: auto;
+        display: flex;
+        text-align: left;
+        width: 22%;
+
+        & > div {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+
+        }
+
+        div > h2 {
+          width: 100%;
+          text-align: center;
+          border-bottom: 1px solid #e9e9e9;
+          height: 46px;
+          padding-top: .5em;
+        }
+
+        img {
+          margin: .2em;
+        }
+      }
+    }
+
+  }
+
+  .el-collapse {
+    &-item {
+      &__header {
+        padding: 1em;
+        font-size: 1.5em;
+        background-color: #ffffff78;
+
+        &.is-active {
+          color: $primary;
+        }
+      }
+
+      &.is-active {
+        & > div:first-of-type {
+          background-color: #ffffff;
+        }
+      }
+
+      &__content {
+        padding: 1em 1.2em 0 1.2em;
+        margin-bottom: -.5em;
+      }
+
+      &__wrap {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 2em;
+        background-color: #ffffff73;
+      }
+    }
+  }
+
+}
