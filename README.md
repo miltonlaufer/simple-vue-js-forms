@@ -8,7 +8,7 @@ To create the form on [this link](http://www.miltonlaufer.com.ar/forms)
 ```
  const fieldsContactInfo = reactive([
       {type: 'el-input', model: 'full_name', label: 'First and family name', required: true},
-      {type: 'el-date-picker', model: 'dob', label: 'Date of bird'},
+      {type: 'el-date-picker', model: 'dob', label: 'Date of birth'},
       {type: 'el-input', model: 'company', label: 'Company name'},
       {
         type: 'el-input', model: 'email', label: ' ', props: {disabled: true},
