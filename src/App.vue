@@ -1,13 +1,12 @@
 <template>
-  <div style="display: flex; flex-direction: column; align-items: center;">
+  <div style="display: flex; flex-direction: column; align-items: center;" id="my-account__wrapper">
     <h1>Easy VUE (ElementUI) Form Generator</h1>
-    <div style="display: flex; justify-content: center;">
+    <div style="display: flex; justify-content: center;" class="personal-data__form">
       <ml-form label-position="left" label-width="40%" :form-data="personalData" @submit.native.prevent="submitForm"
                :loading="loading" ref="personalData" @validate="validate"
                form-name="personalData"
                :v-loading="loading">
         <el-tabs tab-position="top"
-                 style="width: 50vw;"
                  v-model="selectedTab">
           <el-tab-pane name="contact">
             <span slot="label" :class="errors.includes('pane-contact') ? 'tab-error' : ''">Contact info</span>
